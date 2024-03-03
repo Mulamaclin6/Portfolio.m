@@ -1,0 +1,164 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 10px;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 0%; /* Reduced padding */
+  position: sticky;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  header img {
+    width: 80px; /* Adjusted size for smaller screens */
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* Adjusted spacing */
+  background-color: #1a7ee2;
+  padding: 0;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(202, 46, 46, 0.1);
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+  margin-right: 15px;
+}
+
+.burger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: #c01b1b;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  nav.show a {
+    display: block;
+  }
+}
+
+section {
+  padding: 4em 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  margin-top: 2em;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1,
+h2,
+h3 {
+  color: #1073d6;
+}
+
+/* work */
+.work__container {
+  row-gap: 2rem;
+}
+.work__img {
+  box-shadow: 0px 4px 25px rgba(17, 54, 75, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+}
+.work__img img {
+  transition: 1s;
+}
+.work__img img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  padding: 2em 0;
+  background-color: #343a40;
+  color: #fff;
+}
+
+.skills {
+  margin-top: 2em;
+}
+
+.social-icons {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 1.5em;
+  color: #1172d3;
+  text-decoration: none;
+  font-size: 1.8em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #16c510;
+}
+
+.contact-form {
+  margin-top: 2em;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 5px rgba(88, 59, 59, 0.1);
+  padding: 2em;
+  border-radius: 10px;
+}
+button {
+  background-color: #4750cc;
+  align-items: center;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: #3bb62b;
+}

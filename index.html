@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/2ab60624fb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Mulama Clinton Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div class="burger-menu" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <img src="about1.png" alt="image" />
+      <h1>Mulama Clinton</h1>
+      <p>Web Developer</p>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="home" class="active">
+      <h2>Mulama Clinton</h2>
+      <p>Hi, I'am Mulama Web Developer</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'am Mulama Hello! I'm Mulama Clinton, a Software Engineer with a
+        passion <br />for Web Development. I have a diverse background in the IT
+        <br />field and a proven track record of Web design and Graphic designs.
+        <br />My goal is to satisty my clients and convience myself by
+        generating my best in any activity am doing.
+      </p>
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+          <li>Git &amp; GitHub</li>
+          <!-- Add more skills as needed -->
+        </ul>
+      </div>
+      <div class="education">
+        <h3>Education</h3>
+        <p>
+          Diploma in Information Comunication Technology- Bondo Technical
+          Training Institute, 2022
+        </p>
+        <!-- Add more education details as needed -->
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills &amp; Expertise</h2>
+      <div class="skills-list">
+        <div class="skill">
+          <h3>Frontend Development</h3>
+          <p>
+            Creating engaging and responsive user interfaces with HTML, CSS, and
+            JavaScript. Experience with modern frontend frameworks like Node.js.
+          </p>
+        </div>
+        <!-- Add more skills as needed -->
+      </div>
+    </section>
+
+    <section class="work section" id="work">
+      <h2 class="section-title">Work</h2>
+
+      <div class="work__container bd-grid">
+        <a href="" class="work__img">
+          <img src="work4.jpg" alt="" />
+        </a>
+        <a href="" class="work__img">
+          <img src="work3.png" alt="" />
+        </a>
+        <a href="" class="work__img">
+          <img src="work4.jpg" alt="" />
+        </a>
+        <a href="" class="work__img">
+          <img src="work5.jpg" alt="" />
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: mulamaclinton6@gmail.com</p>
+      <p>Phone: +254700835552.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/clinton-mulama/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://github.com/Mulamaclin6"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+      <div class="contact-form">
+        <h3>Contact</h3>
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /> <br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Mulama Clinton. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.querySelector("nav").classList.toggle("show");
+      }
+
+      document.addEventListener("scroll", function () {
+        let sections = document.querySelectorAll("section");
+        sections.forEach((section) => {
+          let sectionTop = section.offsetTop;
+          let sectionHeight = section.clientHeight;
+          if (window.scrollY >= sectionTop - sectionHeight / 2) {
+            section.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
